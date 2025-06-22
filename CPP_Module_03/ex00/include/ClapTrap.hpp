@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 12:37:38 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/17 16:59:02 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 12:47:55 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ class ClapTrap {
         void setAttackDamage(int damage);
         int getAttackDamage() const;
         std::string getName() const;
-
-        void printStatus() const;
+        
 };
 
 #endif

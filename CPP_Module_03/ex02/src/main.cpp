@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:38:19 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:31:04 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 12:23:50 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,33 @@
 #include "FragTrap.hpp"
 
 int main() {
-    ClapTrap t;
-    ClapTrap j("Jerry");
-    ScavTrap s;
-    FragTrap f;
-    
-    t.setAttackDamage(1);
-    j.setAttackDamage(3);
-    s.setAttackDamage(10);
-    f.setAttackDamage(2);
-    
-    t.attack(j.getName());
-    s.attack(t.getName());
-    s.guardGate();
-    t.attack(j.getName());
-    f.attack(t.getName());
-    f.highFivesGuys();
-    j.takeDamage(t.getAttackDamage());
-    t.takeDamage(j.getAttackDamage());
-    j.beRepaired(2);
+    ClapTrap clap;
+    ClapTrap clap1("clapy");
+    ScavTrap scav;
+    FragTrap frag;
 
-    std::cout << "\nClapTrap Status Table:\n";
-    std::cout << "---------------------------------------------------------\n";
-    std::cout << "| Name     | ❤️  Hit Points | 🔋 Energy | 💥 Attack Damage|\n";
-    std::cout << "---------------------------------------------------------\n";
+    clap.setAttackDamage(1);
+    clap1.setAttackDamage(3);
+    scav.setAttackDamage(10);
+    frag.setAttackDamage(2);
 
-    t.printStatus();
-    j.printStatus();
-    s.printStatus();
-    f.printStatus();
+    clap.attack(clap1.getName());
+    clap1.takeDamage(clap.getAttackDamage());
 
-    std::cout << "---------------------------------------------------------\n";
+    scav.attack(clap.getName());
+    clap.takeDamage(scav.getAttackDamage());
+
+    scav.guardGate();
+
+    clap.attack(clap1.getName());
+    clap1.takeDamage(clap.getAttackDamage());
+
+    frag.attack(clap.getName());
+    clap.takeDamage(frag.getAttackDamage());
+
+    frag.highFivesGuys();
+
+    clap1.beRepaired(2);
 
     return 0;
 }

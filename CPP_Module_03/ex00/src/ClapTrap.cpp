@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 12:45:07 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:24:23 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 12:47:40 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iomanip> 
 
 //constructors
-ClapTrap::ClapTrap() : name("Tom"), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap() : name("Clapr"), hitPoints(10), energyPoints(10), attackDamage(0) {
     std::cout << "Default constructor called\n";
 }
 
@@ -60,7 +60,6 @@ std::string ClapTrap::getName() const {
     return name;
 }
 
-
 //member functions
 void ClapTrap::attack(const std::string& target) {
     if (hitPoints <= 0 || energyPoints <= 0) {
@@ -96,13 +95,4 @@ void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << "ClapTrap " << name << " Energy points left " << energyPoints << " points ⚡ \n"; 
     std::cout << "ClapTrap " << name << " is repaired by " 
             << amount << " points! 🔋 " << std::endl;
-}
-
-//other functions
-void ClapTrap::printStatus() const {
-    std::cout << "| "
-              << std::setw(8) << std::left << name << " | "
-              << std::setw(13) << std::right << hitPoints << " | "
-              << std::setw(8) << std::right << energyPoints << " | "
-              << std::setw(15) << std::right << attackDamage << " |\n";
 }

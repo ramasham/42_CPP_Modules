@@ -6,23 +6,25 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 18:23:00 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:32:01 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 13:09:06 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-//constructors
-ScavTrap::ScavTrap() : ClapTrap("Spike") {
-    std::cout << "ScavTrap: default constructor called\n";
-    setHitPoints(100);
-    setEnergyPoints(50);
-    setAttackDamage(20);  
+ScavTrap::ScavTrap() : ClapTrap("scavr") {
+    this->energyPoints = 50;
+    this->attackDamage = 20;
+    this->setHitPoints(ClapTrap::DFL_HP);
+    std::cout << "FragTrap: default constructor called\n";
 }
 
+//constructors
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
+    this->energyPoints = 50;
+    this->attackDamage = 20;
+    this->setAttackDamage(ClapTrap::DFL_HP);
     std::cout << "ScavTrap: constructor called\n";
-    
 }
 
 ScavTrap::~ScavTrap() {
