@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 12:37:38 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:21:43 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 13:17:48 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ClapTrap {
         int hitPoints;
         int energyPoints;
         int attackDamage;
-        ClapTrap(const std::string& name, int hp, int ep, int ad);
+        static const unsigned int DFL_HP = 100;
         
     public:
         ClapTrap();

@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 12:45:07 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:21:06 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 13:19:08 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,8 @@
 #include <iomanip> 
 
 //constructors
-ClapTrap::ClapTrap() : name("Tom"), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap() : name("clapr"), hitPoints(10), energyPoints(10), attackDamage(0) {
     std::cout << "ClapTrap: Default constructor called\n";
-}
-
-ClapTrap::ClapTrap(const std::string& name, int hp, int ep, int ad)
-    : name(name), hitPoints(hp), energyPoints(ep), attackDamage(ad) {
-        std::cout << "ClapTrap: constructor called\n";
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {

@@ -6,7 +6,7 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:38:19 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/22 12:25:24 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 13:21:30 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 
 int main() {
-   DiamondTrap diamo("Tom");
+    DiamondTrap diamo("dimo");
 
     std::cout << diamo.getName() << std::endl;
     std::cout << diamo.getEnergyPoints() << std::endl;

@@ -6,20 +6,25 @@
 /*   By: rsham <rsham@student.42amman.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 12:03:00 by rsham             #+#    #+#             */
-/*   Updated: 2025/06/19 15:19:40 by rsham            ###   ########.fr       */
+/*   Updated: 2025/06/22 13:17:22 by rsham            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
 
-//constructors
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
-    std::cout << "FragTrap: constructor called\n";
+FragTrap::FragTrap() : ClapTrap("fragr") {
+    this->energyPoints = 100;
+    this->attackDamage = 30;
+    this->setHitPoints(ClapTrap::DFL_HP);
+    std::cout << "FragTrap: default constructor called\n";
 }
 
-FragTrap::FragTrap() : ClapTrap("Tuffy", 100, 100, 30) {
-    std::cout << "FragTrap: default constructor called\n";
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
+    this->energyPoints = 100;
+    this->attackDamage = 30;
+    this->setHitPoints(ClapTrap::DFL_HP);
+    std::cout << "constructor called\n";
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
