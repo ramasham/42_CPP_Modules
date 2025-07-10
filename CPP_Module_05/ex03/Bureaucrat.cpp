@@ -1,4 +1,3 @@
-
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() : name("default"), grade(150){
@@ -54,13 +53,25 @@ void Bureaucrat::decrement() {
     grade++;
 }
 
-void Bureaucrat::signForm(Form& form) {
+void Bureaucrat::signForm(AForm& aform) {
     try {
-        form.beSigned(*this);
-        std::cout << this->getName() << " signed " << form.getName() << std::endl;
+        aform.beSigned(*this);
+        std::cout << this->getName() << " signed " << aform.getName() << std::endl;
     }
     catch (const std::exception& e) {
         std::cout << this->getName() << " couldn’t sign "
-                  << form.getName() << " because " << e.what() << std::endl;
+                  << aform.getName() << " because " << e.what() << std::endl;
     }
 }
+
+void Bureaucrat::executeForm(const AForm &form) const {
+    try {
+        form.execute(*this);
+        std::cout << name << " executed " << form.getName() << std::endl;
+    } catch (std::exception &e) {
+        std::cout << name << " couldn’t execute " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
+}
+
+

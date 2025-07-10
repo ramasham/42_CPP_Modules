@@ -3,11 +3,12 @@
 
 #include "iostream"
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
+
 
 //throw -> Something went wrong! Exit from here
 //and go to the nearest matching catch block.
-class Form;
+class AForm;
 
 class Bureaucrat {
     private:
@@ -26,8 +27,9 @@ class Bureaucrat {
 
         void increment();
         void decrement();
-        void signForm(Form& form);
-
+        void signForm(AForm& aform);
+        void executeForm(AForm const & form) const;
+        
         class GradeTooHighException : public std::exception {
             public:
                 virtual const char* what() const throw() {
