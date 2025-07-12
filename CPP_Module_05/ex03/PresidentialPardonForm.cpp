@@ -2,7 +2,7 @@
 #include <iostream>
 
 PresidentialPardonForm::PresidentialPardonForm() : AForm(), target("default") {
-    std::cout << "PresidentialPardonForm: default constructor\n";
+    std::cout << "PresidentialPardonForm: Default constructor called\n";
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string& target)
@@ -27,7 +27,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
-    std::cout << "PresidentialPardonForm: destructor\n";
+    std::cout << "PresidentialPardonForm: Destructor called\n";
 }
 
 void PresidentialPardonForm::executeAction() const {

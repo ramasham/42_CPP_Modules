@@ -1,40 +1,41 @@
 #include "AForm.hpp"
 
 AForm::AForm() : 
-    name("defalut"),
+    name("default"),
     isSigned(false),
-    gradeToExe(150),
-    gradeToSign(150) {
-        std::cout << "Default constructor\n";
+    gradeToSign(150),
+    gradeToExe(150) {
+        std::cout << "AForm: Default constructor called\n";
 }
 
-AForm::AForm(const std::string& name, const int gradeToExe, const int gradeToSign)
-    : name(name), isSigned(false), gradeToExe(gradeToExe), gradeToSign(gradeToSign)
+AForm::AForm(const std::string& name, const int gradeToSign, const int gradeToExe)
+    : name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExe(gradeToExe)
 {
     if (gradeToSign < 1 || gradeToExe < 1)
         throw AForm::GradeTooHighException();
     if (gradeToSign > 150 || gradeToExe > 150)
         throw AForm::GradeTooLowException();
+    std::cout << "AForm: constructor called\n";
 
 }
 
 AForm::~AForm() {
-    std::cout << "destructor\n";
+    std::cout << "AForm: destructor called\n";
 }
 
 AForm::AForm(const AForm& other) :
     name(other.name),
     isSigned(other.isSigned),
-    gradeToExe(other.gradeToExe),
-    gradeToSign(other.gradeToSign) {
-        std::cout << "Copy constructor called\n";
+    gradeToSign(other.gradeToSign),
+    gradeToExe(other.gradeToExe) {
+        std::cout << "AForm: Copy constructor called\n";
 }
 
 AForm& AForm::operator=(const AForm& other) {
     if (this != &other) {
        this->isSigned = other.isSigned;
     }
-    std::cout << "Copy assignment operator called\n" << std::endl;
+    std::cout << "AForm: Copy assignment operator called\n";
     return *this;
 }
 
@@ -64,7 +65,7 @@ bool AForm::getIsSigned() const {
 }
 
 std::ostream& operator<<(std::ostream& os, const AForm& f) {
-    os << "Form \"" << f.getName()
+    os << "[Form] Name: \"" << f.getName() << "\""
        << "\", signed: " << (f.getIsSigned() ? "yes" : "no")
        << ", grade to sign: " << f.getGradeToSign()
        << ", grade to execute: " << f.getGradeToExecute();

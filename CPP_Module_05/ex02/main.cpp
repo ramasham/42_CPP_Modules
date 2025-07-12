@@ -1,9 +1,15 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
 #include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main() {
+    std::srand(std::time(0));
+
     Bureaucrat bob("Bob", 1);
 
     ShrubberyCreationForm tree("garden");
@@ -15,10 +21,12 @@ int main() {
         bob.signForm(robo);
         bob.signForm(pardon);
 
-        bob.executeForm(tree);    // creates "garden_shrubbery"
-        bob.executeForm(robo);    // 50% chance of success
-        bob.executeForm(pardon);  // pardon message
-    } catch (std::exception& e) {
-        std::cerr << e.what() << std::endl;
+        bob.executeForm(tree);
+        bob.executeForm(robo);
+        bob.executeForm(pardon);
+    } catch (const std::exception& e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
     }
+
+    return 0;
 }

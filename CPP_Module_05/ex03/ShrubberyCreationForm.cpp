@@ -27,7 +27,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {
-    std::cout << "ShrubberyCreationForm: destructor\n";
+    std::cout << "ShrubberyCreationForm: Destructor called\n";
 }
 
 void ShrubberyCreationForm::executeAction() const {

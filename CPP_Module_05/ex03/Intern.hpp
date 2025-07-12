@@ -2,10 +2,18 @@
 #define INTERN_HPP
 
 #include <iostream>
+#include "AForm.hpp"
+
+class AForm;
 
 class Intern {
     public:
-        void makeForm(std::string& formName, std::string& target);
+        Intern();
+        Intern(const Intern& other);
+        Intern& operator=(const Intern& other);
+        ~Intern();
+
+        AForm* makeForm(const std::string& formName, const std::string& target);
 };
 
 #endif
