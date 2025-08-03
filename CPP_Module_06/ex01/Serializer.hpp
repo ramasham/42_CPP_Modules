@@ -17,4 +17,7 @@ class  Serializer {
         static Data* deserialize(uintptr_t raw);
 
 };
+
+//A static member function is a function that belongs to the class itself,
+//not to any particular object (instance) of the class.
 #endif
