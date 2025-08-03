@@ -12,60 +12,75 @@ The 42 C++ Modules are a series of incremental projects designed to develop your
 
 ## 🚀 Modules Summary
 
-### Module 00 - Introduction to C++ and Basics
-- Understanding C++ syntax and compilation
-- Basic input/output
-- Functions, loops, and conditionals
-- Simple programs with fundamental data types
+### Module 00 - Introduction to C++ and Basics  
+- Understand the basic syntax and structure of C++ programs  
+- Learn how to compile and run simple programs  
+- Work with basic input and output streams  
+- Practice control flow using loops and conditionals  
+- Manipulate fundamental data types and variables  
 
-### Module 01 - Classes and Objects
-- Introduction to classes and objects
-- Constructors and destructors
-- Access specifiers (private, public, protected)
-- Encapsulation and class methods
+### Module 01 - Classes and Objects  
+- Grasp the concept of classes and object instantiation  
+- Implement constructors and destructors for proper object lifecycle  
+- Use access specifiers (public, private, protected) for encapsulation  
+- Develop member functions and understand class methods  
+- Apply basic principles of object-oriented design  
 
-### Module 02 - The Orthodox Canonical Form
-- Rule of three/five/zero
-- Copy constructor, copy assignment operator, destructor
-- Managing resources correctly to avoid leaks
+### Module 02 - Ad-hoc Polymorphism, Operator Overloading, The Orthodox Canonical Form  
+- Learn the Rule of Three/Five/Zero for safe resource management  
+- Implement copy constructors, assignment operators, and destructors  
+- Overload operators to customize class behavior (e.g., arithmetic, assignment)  
+- Understand ad-hoc polymorphism through operator overloading  
+- Avoid common pitfalls such as shallow copies and memory leaks  
 
-### Module 03 - Inheritance and Polymorphism
-- Base and derived classes
-- Virtual functions and overriding
-- Abstract classes and interfaces
-- Demonstrating polymorphic behavior
+### Module 03 - Inheritance and Polymorphism  
+- Build inheritance hierarchies with base and derived classes  
+- Override virtual functions to enable runtime polymorphism  
+- Design abstract classes and interfaces for flexible code architecture  
+- Explore dynamic binding and virtual function tables  
+- Create polymorphic containers and manage heterogeneous objects  
 
-### Module 04 - More Advanced Inheritance and Polymorphism
-- Virtual inheritance
-- Abstract base classes
-- More complex class hierarchies
-- Usage of virtual destructors
+### Module 04 - More Advanced Inheritance and Polymorphism  
+- Handle complex inheritance using virtual inheritance techniques  
+- Work with abstract base classes for enforcing interfaces  
+- Understand multiple inheritance and its challenges  
+- Ensure correct resource cleanup with virtual destructors  
+- Refine class hierarchies for extensibility and maintainability  
 
-### Module 05 - Operator Overloading
-- Overloading arithmetic, comparison, and assignment operators
-- Stream insertion/extraction operators (`<<` and `>>`)
-- Implementing custom behaviors for operators in classes
+### Module 05 - Repetition and Exceptions  
+- Revisit operator overloading for arithmetic, comparison, and stream operators  
+- Deepen understanding of exception handling with `try`, `catch`, and `throw`  
+- Create custom exception classes for specialized error reporting  
+- Manage program flow and resource cleanup in the presence of exceptions  
+- Apply exception safety guarantees to maintain robust applications  
 
-### Module 06 - Templates and Generic Programming
-- Function and class templates
-- Template specialization and instantiation
-- Generic algorithms and container usage
+### Module 06 - Casting  
+- Master function and class templates for generic programming  
+- Learn template specialization and partial specialization  
+- Practice safe and effective type casting within template code  
+- Understand static, dynamic, const, and reinterpret casts  
+- Write reusable and flexible code leveraging template mechanisms  
 
-### Module 07 - Exceptions and Error Handling
-- Using `try`, `catch`, and `throw`
-- Custom exception classes
-- Exception safety and resource management
+### Module 07 - Templates and Generic Programming  
+- Expand template skills to build templated containers and algorithms  
+- Implement generic algorithms that work with multiple data types  
+- Explore template metaprogramming basics and compile-time computation  
+- Learn to balance code flexibility with performance considerations  
+- Harness the power of the Standard Template Library (STL)  
 
-### Module 08 - Advanced Topics (Iterators, Functors, Lambdas)
-- Iterators and ranges
-- Functors and callable objects
-- Lambda expressions and capturing
-- STL algorithms
+### Module 08 - Advanced Topics (Templated Containers, Iterators, Algorithms)  
+- Deep dive into STL containers and their iterator interfaces  
+- Create and use functors and callable objects effectively  
+- Utilize lambda expressions for concise and powerful inline functions  
+- Apply STL algorithms for searching, sorting, and transforming data  
+- Write clean, maintainable, and efficient code using modern C++ idioms  
 
-### Module 09 - Final Project: PmergeMe & Others
-- Implementing Ford-Johnson merge-insert sorting algorithm
-- Usage of STL containers (`vector`, `deque`)
-- Performance benchmarking and optimization
+### Module 09 - Final Project: RPN, PmergeMe & Others  
+- Implement advanced algorithms such as the Ford-Johnson merge-insert sort  
+- Develop a Reverse Polish Notation (RPN) calculator  
+- Use STL containers like `vector` and `deque` to manage data efficiently  
+- Optimize performance through algorithmic improvements  
+- Demonstrate integration of learned concepts into practical projects  
 
 ---
 
